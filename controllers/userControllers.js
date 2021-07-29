@@ -6,7 +6,7 @@ const { Connection } = require("./dbConfig");
 const dbUrl = Connection.dbUrl;
 const dbName = Connection.dbName;
 const collectionName = "users";
-const encryptionKey = "556B58703273357638792F423F4528482B4B6250655368566D597133743677397A24432646294A404E635166546A576E5A7234753778214125442A472D4B6150";
+const encryptionKey = "skpbhjko";
 
 function checkUser(request, response) {
     mongoClient.connect(dbUrl, { useUnifiedTopology: true }, (err, dbHost) => {
