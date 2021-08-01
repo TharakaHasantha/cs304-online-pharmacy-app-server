@@ -1,8 +1,6 @@
 const mongoClient = require("mongodb").MongoClient;
 var CryptoJS = require("crypto-js");
 
-const { Connection } = require("./dbConfig");
-
 const dbUrl = Connection.dbUrl;
 const dbName = Connection.dbName;
 const collectionName = "users";
@@ -55,6 +53,8 @@ function checkUser(request, response) {
         }
     })
 }
+
+
 
 function registerUser(request, response) {
     mongoClient.connect(dbUrl, { useUnifiedTopology: true }, (err, dbHost) => {
